@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import { Home } from './Pages/Home'
+import React from 'react';
+import { Routes, Route, HashRouter } from 'react-router-dom';
+import './App.css';
+import { Home } from './Pages/Home';
+import { Deputado } from './Pages/Deputado';
 
 const App = () => {
-
   return (
-    <div >
-      <Home />
-    </div>
-  )
-}
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/deputado' element={<Deputado />} />
+      </Routes>
+    </HashRouter>
+  );
+};
 
-export default App
+export default App;
